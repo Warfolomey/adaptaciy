@@ -82,39 +82,15 @@ gulp.task('browser-sync', function () { // Создаем таск browser-sync
     });
 });
 
-gulp.task('vendor', ['clean'], function () {
-    return gulp.src(['app/js-libs/jquery-2.1.3.min.js',
-        'app/js-libs/jquery-ui.min.js',
-        'app/js-libs/bootstrap.min.js',
-        'app/js-libs/jquery.fancybox.js',
-        'app/js-libs/fileinput.js',
-        'app/js-libs/jquery.jscrollpane.min.js',
-        'app/js-libs/jquery.mousewheel.js',
-        'app/js-libs/perfect-scrollbar.jquery.js',
-        'app/js-libs/lightbox.min.js',
-        'app/js-libs/countdown.js',
-        'app/js-libs/map.js',
-        'app/js-libs/validation.js',
-        'app/js-libs/fotorama.js',
-        'app/js-libs/slick.js',
-        'app/js-libs/owl.carousel.min.js'])// Берем все необходимые библиотеки
-        .pipe(plumber())
-        .pipe(concat('vendor.js'))// Собираем их в кучу в новом файле vendor.js
-        .pipe(rename({}))
-        /*.pipe(uglify()) // Сжимаем JS файл*/
-        .pipe(plumber.stop())
-        .pipe(gulp.dest('./public/js'));// Выгружаем в папку js
-});
-
 gulp.task('compress', ['clean'], function () {// Создаем таск compress
     return gulp.src('app/js/*.js')// Берем все необходимые библиотеки
         .pipe(plumber())
-        .pipe(concat('script.js'))// Собираем их в кучу в новом файле script.js
-        .pipe(rename({
-            suffix: ".min",// Добавляем суффикс .min
-            extname: ".js"// Добавляем окончание .js
-        }))
-        .pipe(uglify()) // Сжимаем JS файл
+        .pipe(concat('main.js'))// Собираем их в кучу в новом файле script.js
+        // .pipe(rename({
+        //     suffix: ".min",// Добавляем суффикс .min
+        //     extname: ".js"// Добавляем окончание .js
+        // }))
+        // .pipe(uglify()) // Сжимаем JS файл
         .pipe(plumber.stop())
         .pipe(gulp.dest('./public/js'))// Выгружаем в папку js
         .pipe(browserSync.stream({}));
@@ -125,7 +101,6 @@ gulp.task("clean", function (cb) {
     rimraf('./js/script.min.js', cb);
 });
 
-
 gulp.task('jade', function() {
     gulp.src('app/template/pages/*.jade')
         .pipe(plumber())
@@ -135,8 +110,6 @@ gulp.task('jade', function() {
         .pipe(gulp.dest('./public'));
 });
 
-
-
 gulp.task('watch', ['compress', 'jade', 'css-libs', 'img', 'sass'], function () {
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
@@ -144,7 +117,6 @@ gulp.task('watch', ['compress', 'jade', 'css-libs', 'img', 'sass'], function () 
     gulp.watch(['app/template/**/*.jade'], ['jade']);// Наблюдение за HTML-файлами в папке html
     gulp.watch('app/js/**/*.js', ['compress']); // Наблюдение за js-файлами
 });
-
 
 gulp.task('img', function () {
     return gulp.src('app/img/**/*')
