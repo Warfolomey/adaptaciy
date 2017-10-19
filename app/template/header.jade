@@ -1,1 +1,51 @@
-header.header
+header.row
+    nav.col-lg-5
+        ul.blue_menu
+            li.hidden-sm.hidden-xs.active
+                a(href='#') Продукция
+            li.hidden-sm.hidden-xs
+                a(href='#') Где купить
+            li.hidden-md.hidden-sm.hidden-xs
+                a(href='#') Партнерство
+            li.hidden-lg.hidden-md.hidden-sm.hidden-xs
+                a(href='#') Компания
+            li.hover_parent
+                .dotted_burger
+                    span •
+                    span •
+                    span •
+                ul.sub_menu.header_nav_sub_menu.hint
+                    li.hidden-xl.hidden-lg.hidden-md
+                        a(href='#') Продукция
+                    li.hidden-xl.hidden-lg.hidden-md
+                        a(href='#') Где купить
+                    li.hidden-xl.hidden-lg
+                        a(href='#') Партнерство
+                    li.hidden-xl
+                        a(href='#') Компания
+                    li.active
+                        a(href='#') СМИ о нас
+                    li
+                        a(href='#') Доставка и оплата
+                    li
+                        a(href='#') Гарантия и возврат
+    .col-lg-2
+        .logo.parent
+            // <a href="#"><span class="blue">Авто</span><span class="red">тепло</span></a>
+            a.black_logo(href='/avtoteplo/')
+                img(src='img/logoblack.png')
+            a.white_logo(href='/avtoteplo/')
+                img(src='img/logowhite.png')
+            .hint
+                p На главную страницу
+    .col-lg-4.col-lg-offset-1.h_right
+        .tel.parent
+            span С 6 до 21
+                span.dot Бесплатно
+            a(href='tel:88005554374') 8 800 511 31 51
+            .hint
+                p Бесплатно со всех телефонов России
+        a.hidden-md.hidden-sm.hidden-xs(href='#') Контакты
+        span.cart.hidden-sm.hidden-xs(href='#')
+            span 0
+            p Оформить заказ

@@ -1,2 +1,163 @@
-include ../html_open
-include ../html_close
+doctype html
+html
+    head(lang='en')
+        meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+        title Title
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+        link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
+        link(rel='stylesheet', type='text/css', href='css/bootstrap-theme.min.css')
+        link(rel='stylesheet', type='text/css', href='css/libs.min.css')
+        link(rel='stylesheet', type='text/css', href='css/style.css')
+        link(rel='stylesheet', type='text/css', href='css/styles.min.css')
+        link(href='https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic', rel='stylesheet', type='text/css')
+        link(href='css/fototama.css', rel='stylesheet')
+        // <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+        script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
+
+    body
+        .hint_overflow_bg
+        .main.banner_page
+            .container-fluid
+                .row.before_header.before_header_white
+                    .col-lg-8.col-lg-offset-2
+                        ul.dot_inside
+                            li
+                                a.blue(href='#') 15 точек продаж
+                            | в г. Челябинск
+                            li Доставка за 1-2 дня
+                            li Самовывоз
+                            li
+                                .hint_wrapper
+                                    p.show_hint.blue Другой город
+                                    .hint.header_city_menu.hint_check
+                                        .close
+                                            img(src='img/close.png')
+                                        h3 Где вы находитесь?
+                                        .overflow
+                                            form.hint_form_wrapper
+                                                input(type='text', name='city', placeholder='Поиск населенного пункта', autofocus='')
+                                                .clear
+                                                    img(src='img/clear.png', alt='clear')
+                                            small.variative
+                                                p Популярные города
+                                            ul.sub_menu
+                                                li
+                                                    .crop
+                                                        span.city Челябинск
+                                                        span.region Челябинская область
+                                                li
+                                                    .crop
+                                                        span.city Москва
+                                                        span.region Московская область
+                                                li
+                                                    .crop
+                                                        span.city Санкт-Петербург
+                                                        span.region Ленинградская область
+                                                li
+                                                    .crop
+                                                        span.city Ростов
+                                                        span.region Ростовская область
+                                                li
+                                                    .crop
+                                                        span.city Челябинск
+                                                        span.region Челябинская область
+                                                li
+                                                    .crop
+                                                        span.city Челябинск
+                                                        span.region Челябинская область
+                                                li
+                                                    .crop
+                                                        span.city Москва
+                                                        span.region Московская область
+                                                li
+                                                    .crop
+                                                        span.city Санкт-Петербург
+                                                        span.region Ленинградская область
+                                                li
+                                                    .crop
+                                                        span.city Ростов
+                                                        span.region Ростовская область
+                                                li
+                                                    .crop
+                                                        span.city Челябинск
+                                                        span.region Челябинская область
+                                                li
+                                                    .crop
+                                                        span.city Челябинск
+                                                        span.region Челябинская область
+                                                li
+                                                    .crop
+                                                        span.city Москва
+                                                        span.region Московская область
+                                                li
+                                                    .crop
+                                                        span.city Санкт-Петербург
+                                                        span.region Ленинградская область
+                                                li
+                                                    .crop
+                                                        span.city Ростов
+                                                        span.region Ростовская область
+                                                li
+                                                    .crop
+                                                        span.city Челябинск
+                                                        span.region Челябинская область
+
+            include ../header
+            include ../footer
+            .container-fluid.banner.avtoteplo
+                .white_320_transparent_bg
+                    .white_transparent_bg
+                    .row.banner_content
+                        .col-lg-4.col-lg-offset-1
+                            .title_block
+                                h1.nowrap Автотепло —
+                                    br
+                                    | утеплитель
+                                    br
+                                    | для двигателя
+                                    br
+                                    | автомобиля
+                                p Что бы не бояться морозов, не ждать прогрева в холодном салоне и не соскребать наледь с капота по утрам.
+                                p И что бы сжигать зимой на 20—30% топлива меньше, чем обычно.
+                            iframe(width='373', height='209', src='https://www.youtube.com/embed/7PGbjTmK49s', frameborder='0', allowfullscreen='')
+                            p Обзор в передаче НТВ «Главная Дорога»
+                    .row.banner_bottom_row.banner_content
+                        .col-lg-8.banner_menu_bottom
+                            ul.blue_menu.smooth_links
+                                li.active
+                                    a(href='#advantages_a') Преимущества
+                                li.hidden_320
+                                    a(href='#technology_a') Технология и хар-ки
+                                li.hidden-xs
+                                    a(href='#buy_a') Совместимость
+                                li.hidden-sm.hidden-xs
+                                    a(href='#podd_a') Подделки
+                                li.hidden-sm.hidden-xs
+                                    a(href='#video_a') Видео
+                                li.hover_parent.hidden-xl.hidden-lg.hidden-md
+                                    .dotted_burger
+                                        span •
+                                        span •
+                                        span •
+                                    ul.sub_menu.header_nav_sub_menu.hint
+                                        li.active.hidden-sm.hidden-xs
+                                            a(href='#advantages_a') Преимущества
+                                        li.hidden-sm.hidden-xs.visible_480
+                                            a(href='#technology_a') Технология и хар-ки
+                                        li.hidden-sm
+                                            a(href='#buy_a') Совместимость
+                                        li
+                                            a(href='#podd_a') Подделки
+                                        li
+                                            a(href='#video_a') Видео
+                        .col-lg-4.smooth_links
+                            .price_block
+                                span.yellow_bg.bold.hidden-md.hidden-sm.hidden-xs от
+                                    span.price_wrapper 1500
+                                        span.price &#x20B7;
+                                span.grey.crossed.hidden-md.hidden-sm.hidden-xs 1900
+                                    span.price &#x20B7;
+                                a.blue_round_btn(href='#buy_a') Купить
+        script(src='js/jquery-3.2.1.min.js', type='text/javascript')
+        script(src='js/bootstrap.min.js', type='text/javascript')
+        script(src='js/main.js', type='text/javascript')

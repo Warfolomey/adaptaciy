@@ -1,50 +1,24 @@
-html{
-    width: 100%;
-}
 body{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-weight: inherit;
-    font-style: inherit;
-    font-family: inherit;
-    text-align: left;
-    vertical-align: baseline;
-    //font-family: 'Open Sans', sans-serif;
-    //font-family: 'PT Sans', sans-serif;
-    //font-family: 'Roboto', sans-serif;
-    //font-family: 'Source Sans Pro', sans-serif;
-    //font-family: 'Lato', sans-serif;
+    font-family: "HelveticaNeueCyr";
+    font-size: 18px;
+    font-style: normal;
+    font-stretch: normal;
+    font-weight: 400;
 }
-
-a {
+a{
+    color: #037AFF;
+}
+a:hover{
+    color: #D0011B;
     text-decoration: none;
-    &:hover, &:focus, &:active{
-        text-decoration: none;
-    }
 }
-
-input{
-    outline: none;
-    &:hover, &:focus, &:active{
-        outline: none;
-    }
+a:focus{
+    text-decoration: none;
+    color: #037AFF;
 }
-
-textarea{
-    outline: none;
-    &:hover, &:focus, &:active{
-        outline: none;
-    }
-}
-
-%clearfix {
-    *zoom: 1;
-    &:after {
-        content: '';
-        display: table;
-        line-height: 0;
-        clear: both;
-    }
+p{
+    font-size: 18px;
+    font-style: normal;
+    font-stretch: normal;
+    font-weight: 400;
 }
